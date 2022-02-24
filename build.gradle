@@ -1,5 +1,19 @@
 plugins {
     id 'application'
+    id("com.palantir.graal") version "0.10.0" // regular plugin import
+}
+
+apply plugin: "com.palantir.graal"
+
+apply plugin: 'java'
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+graal {
+    mainClass 'com.gutmox.Main'
+    outputName 'vertx-native'
 }
 
 repositories {
