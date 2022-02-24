@@ -30,7 +30,8 @@ graal {
     option("--initialize-at-run-time=io.netty.handler.ssl.ConscryptAlpnSslEngine")
     option("--initialize-at-run-time=io.netty.handler.ssl.JettyNpnSslEngine")
     option("--initialize-at-run-time=io.netty.util.internal.logging.Log4JLogger")
-    option("--initialize-at-run-time=io.netty.handler.ssl.OpenSslAsyncPrivateKeyMethod ")
+    option("--initialize-at-run-time=io.netty.handler.ssl.OpenSslAsyncPrivateKeyMethod")
+    option("--initialize-at-run-time=io.netty.handler.ssl.BouncyCastleAlpnSslUtils")
 }
 
 repositories {
