@@ -7,13 +7,26 @@ apply plugin: "com.palantir.graal"
 
 apply plugin: 'java'
 compileJava {
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
 }
 
 graal {
     mainClass 'com.gutmox.Main'
     outputName 'vertx-native'
+    graalVersion("21.3.0")
+    javaVersion("17")
+    option("--allow-incomplete-classpath")
+    option("--initialize-at-run-time=io.netty.handler.ssl.OpenSslPrivateKeyMethod")
+    option("--initialize-at-run-time=io.netty.handler.ssl.OpenSslPrivateKeyMethod")
+    option("--initialize-at-run-time=io.netty.internal.tcnative.AsyncSSLPrivateKeyMethod")
+    option("--initialize-at-run-time=io.netty.internal.tcnative.CertificateCompressionAlgo")
+    option("--initialize-at-run-time=io.netty.internal.tcnative.CertificateVerifier")
+    option("--initialize-at-run-time=io.netty.internal.tcnative.SSL")
+    option("--initialize-at-run-time=io.netty.handler.ssl.JdkNpnApplicationProtocolNegotiator")
+    option("--initialize-at-run-time=io.netty.handler.ssl.ReferenceCountedOpenSslEngine")
+    option("--initialize-at-run-time=io.netty.internal.tcnative.SSLPrivateKeyMethod")
+    option("--initialize-at-run-time=io.netty.handler.ssl.ConscryptAlpnSslEngine")
 }
 
 repositories {
